@@ -22,8 +22,13 @@ hr{
 }
 
     /* Couleurs */
-.fas, .far, .fab, .text-color, #galery footer .isActive, #why a{
+.fas, .far, .fab, .text-color, #portfolio footer .isActive, #why a{
     color: #71dfad;
+}
+
+    /* Borders qui reviennent souvent*/
+#portfolio, .comment-impair, .comment-pair{
+    border-bottom: 1px solid rgba(211, 211, 211, 0.342);
 }
 
     /* Id */
@@ -126,31 +131,29 @@ header{
 main{
     background-color: white;;
 }
-    /* Banner */
-#banner{
+    /* home */
+#home{
     background: rgb(59, 58, 58) url("ressources/img/mountains.jpg") no-repeat center 80%;
     background-size: cover;
     padding: 5em;
-}
-#banner.text{
     color: #71dfad;
     text-shadow: -1px -1px 10px black;
     width: 100%;
     text-align: center;
 }
-#banner p{
+#home p{
     font-weight: 500;
 }
 
-    /* Intro */
-#intro{
+    /* about */
+#about{
     padding-top: 1em;
     padding-bottom: 3em;
 }
-#intro>*{
+#about>*{
     flex: 1;
 }
-#intro h2{
+#about h2{
     margin-bottom: 0;
 }
 #why p{
@@ -161,6 +164,7 @@ main{
 }
 #what{
     padding: 0 1em;
+    margin: 0 1em;
 }
 #what div div{
     margin: 0.75em 0;
@@ -189,27 +193,27 @@ main{
 }
 
 
-    /* Galery */
-#galery section{
+    /* portfolio */
+#portfolio section{
     flex-wrap: wrap;
 }
-#galery section div{
+#portfolio section div{
     min-width: 25%;
     flex: 1;
 }
-#galery img{
+#portfolio img{
     height: 100%;
 }
-#galery li{
+#portfolio li{
     list-style: none;
     padding: 0 1em 0 0;
 }
-#galery footer{
+#portfolio footer{
     padding-top: 2.5em;
     padding-bottom: 2.5em;
     justify-content: space-between;
 }
-#galery footer li{
+#portfolio footer li{
     margin: auto 0;
     text-transform: uppercase;
     font-weight: bolder;
@@ -221,6 +225,60 @@ main{
     /* testimonials */
 #testimonials h1{
     margin-bottom: 0;
+}
+#testimonials img{
+    clip-path: circle(50% at 50% 50%);
+}
+.profile-pic{
+    height: 100px;
+    width: 100px;
+}
+#testimonials>section{
+    display: flex;
+}
+.commentary>p:first-child{
+    padding-bottom: 1em;
+    font-style: italic;
+    font-size: 20px;
+}
+.comment-pair{
+    justify-content: flex-end;
+    text-align: end;
+}
+.comment-pair, .comment-impair{
+    padding: 1.5em 0;
+}
+.comment-impair .commentary{
+    padding-left: 2em;
+}
+.comment-pair .commentary{
+    padding-right: 2em;
+}
+.commentary>p:last-child{
+    border-bottom: none;
+}
+#testimonials .align{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+    /* Outro */
+#outro{
+    text-align: center;
+    color: white;
+    background: rgb(59, 58, 58) url("ressources/img/stars.jpg") no-repeat center center;
+    background-size: cover;
+}
+#outro .padding{
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+#outro h1{
+    margin-bottom: 0;
+}
+#outrop h1, #outro p{
+    padding-top: 1em;
+    padding-bottom: 3em;
 }
 /*--------------------------------------------------------*/
 
