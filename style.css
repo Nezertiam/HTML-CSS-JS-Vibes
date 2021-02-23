@@ -1,0 +1,228 @@
+/*----------------- AFFICHAGE GLOBAL ---------------------*/
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(59, 58, 58);
+}
+
+img{
+    width: 100%;
+}
+
+hr{
+    border: none;
+    background-color: #71dfad;
+}
+
+    /* Couleurs */
+.fas, .far, .fab, .text-color, #galery footer .isActive{
+    color: #71dfad;
+}
+
+    /* Id */
+#wrapper{
+    max-width: 1128px;
+    margin: 0 auto;
+}
+    /* Classes */
+.disp-flex{
+    display: flex;
+}
+.padding{
+    padding-left: 6em;
+    padding-right: 6em;
+}
+    /* Boutons */
+.btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    font-weight: 600;
+}
+.text-white{
+    color: white
+}
+.border-white{
+    border: 2px solid white;
+}
+.border-color{
+    border: 2px solid #71dfad;
+}
+    /* Titres */
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+h2{
+    text-transform: capitalize;
+    font-weight: 900;
+}
+h3{
+    text-transform: uppercase;
+    display: inline;
+    font-weight: 900;
+    font-size: 1em;
+}
+/*--------------------------------------------------------*/
+
+
+
+/*----------------- HEADER -------------------------------*/
+    /* Color-picker */
+#color-picker{
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 15%;
+}
+
+    /* Navigation */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+#main-nav{
+    display: flex;
+    margin-top: 2em;
+}
+#main-nav li{
+    text-transform: uppercase;
+    list-style: none;
+    margin: 0.5em 1em;
+}
+#main-nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 12.5px;
+}
+#burger{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5em;
+    margin: 2em 0 auto 1em;
+}
+/*--------------------------------------------------------*/
+
+
+
+/*----------------- MAIN ---------------------------------*/
+main{
+    background-color: white;;
+}
+    /* Banner */
+#banner{
+    background: rgb(59, 58, 58) url("ressources/img/mountains.jpg") no-repeat center 80%;
+    background-size: cover;
+    padding: 5em;
+}
+#banner.text{
+    color: #71dfad;
+    text-shadow: -1px -1px 10px black;
+    width: 100%;
+    text-align: center;
+}
+#banner p{
+    font-weight: 500;
+}
+
+    /* Intro */
+#intro{
+    padding-top: 1em;
+    padding-bottom: 3em;
+}
+#intro>*{
+    flex: 1;
+}
+#intro h2{
+    margin-bottom: 0;
+}
+#what div div{
+    margin: 0.75em 0;
+}
+#what span{
+    margin: auto 0.5em auto 0;
+    font-size: 1.5em;
+}
+#what p{
+    margin: 0;
+    text-transform: capitalize;
+}
+#complement{
+    margin-top: 1.5em;
+}
+#complement div{
+    border: 1px solid lightgray;
+    padding: 0.8em;
+    margin: 0.5em;
+}
+#complement span{
+    margin-right: 1em;
+}
+#complement p{
+    margin-left: 2em;
+}
+
+
+    /* Galery */
+#galery section{
+    flex-wrap: wrap;
+}
+#galery section div{
+    min-width: 25%;
+    flex: 1;
+}
+#galery img{
+    height: 100%;
+}
+#galery li{
+    list-style: none;
+    padding: 0 1em 0 0;
+}
+#galery footer{
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    justify-content: space-between;
+}
+#galery footer li{
+    margin: auto 0;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: lightgray;
+}
+
+
+
+    /* testimonials */
+#testimonials h1{
+    margin-bottom: 0;
+}
+/*--------------------------------------------------------*/
+
+
+
+/*----------------- FOOTER -------------------------------*/
+
+/*--------------------------------------------------------*/
+
+
+
+/*----------------- RESPONSIVE ---------------------------*/
+
+/*--------------------------------------------------------*/
