@@ -22,7 +22,7 @@ hr{
 }
 
     /* Couleurs */
-.fas, .far, .fab, .text-color, #galery footer .isActive{
+.fas, .far, .fab, .text-color, #galery footer .isActive, #why a{
     color: #71dfad;
 }
 
@@ -152,6 +152,15 @@ main{
 }
 #intro h2{
     margin-bottom: 0;
+}
+#why p{
+    text-align: justify;
+}
+#why a{
+    text-decoration: none;
+}
+#what{
+    padding: 0 1em;
 }
 #what div div{
     margin: 0.75em 0;
