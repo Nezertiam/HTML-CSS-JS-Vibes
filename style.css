@@ -26,7 +26,7 @@ hr{
 }
 
     /* Couleurs */
-.fas, .far, .fab, .text-color, #portfolio footer .isActive, #why a{
+.color, .fas, .far, .fab, .text-color, #portfolio footer .isActive, #why a{
     color: #71dfad;
 }
 
@@ -304,7 +304,32 @@ main{
 #contacts{
 
 }
+.form{
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.inForm{
+    flex: 1;
+}
+.inForm section{
+    padding-top: 1.5em;
+}
+.inForm:first-child{
+    margin-right: 0.5em;
+}
+.inForm:last-child{
+    margin-left: 0.5em;
+}
+
+#yourname, #youremail, #yourphone, #yoursubject, #yourmessage{
+    width: 100%;
+    font-size: 1.75em;
+}
+
+#yourmessage{
+    height: 4.55em;
+}
 /*--------------------------------------------------------*/
 
 
