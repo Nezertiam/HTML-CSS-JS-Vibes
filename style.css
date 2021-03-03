@@ -10,6 +10,7 @@ html{
 
 body{
     background-color: rgb(59, 58, 58);
+    margin: 0;
 }
 
 .mobile{
@@ -35,7 +36,7 @@ hr{
 }
 
     /* Borders qui reviennent souvent*/
-#portfolio, .comment-impair, .comment-pair{
+#portfolio{
     border-bottom: 1px solid rgba(211, 211, 211, 0.342);
 }
 
@@ -75,6 +76,9 @@ hr{
 .background-color{
     background-color: #71dfad;
 }
+.background-color-transp, #outro p{
+    background-color: rgba(0, 0, 0, 0.678);
+}
     /* Titres */
 h1{
     text-align: center;
@@ -98,11 +102,15 @@ h3{
 /*----------------- HEADER -------------------------------*/
     /* Color-picker */
 #color-picker{
-    background-color: white;
+    background-color: black;
+    font-size: 1.5em;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 15%;
+}
+#color-picker i{
+    padding : 0.5em;
 }
 
     /* Navigation */
@@ -165,8 +173,14 @@ main{
     padding-top: 1em;
     padding-bottom: 3em;
 }
-#about>*{
+#about section:first-child>*{
     flex: 1;
+}
+#about section:first-child{
+    flex: 2;
+}
+#about section:last-child{
+    flex:1;
 }
 #about h2{
     margin-bottom: 0;
@@ -206,9 +220,6 @@ main{
 }
 #complement span{
     margin-right: 1em;
-}
-#complement p{
-    margin-left: 2em;
 }
 
 
@@ -251,32 +262,35 @@ main{
     clip-path: circle(50% at 50% 50%);
 }
 .profile-pic{
-    height: 100px;
-    width: 100px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    max-width: 100px;
 }
 #testimonials>section{
     display: flex;
 }
-.commentary>p:first-child{
+.commentary>p:first-of-type{
     padding-bottom: 1em;
     font-style: italic;
     font-size: 20px;
 }
-.comment-pair{
-    justify-content: flex-end;
+#testimonials section:nth-of-type(2n){
+    justify-content:flex-end;
+    flex-direction: row-reverse;
     text-align: end;
 }
-.comment-pair, .comment-impair{
+#testimonials section{
     padding: 1.5em 0;
 }
-.comment-impair .commentary{
+#testimonials section:nth-of-type(1n) .commentary{
     padding-left: 2em;
 }
-.comment-pair .commentary{
+#testimonials section:nth-of-type(2n) .commentary{
     padding-right: 2em;
 }
-#testimonials section:last-child{
-    border-bottom: none;
+#testimonials section:not(:last-of-type){
+    border-bottom: 1px solid rgba(211, 211, 211, 0.342);
 }
 
 #testimonials .align{
@@ -289,7 +303,7 @@ main{
 #outro{
     text-align: center;
     color: white;
-    background: rgb(59, 58, 58) url("ressources/img/stars.jpg") no-repeat center center;
+    background: rgb(59, 58, 58) url("ressources/img/pxl-art.gif") no-repeat center center;
     background-size: cover;
 }
 #outro .padding{
@@ -301,7 +315,10 @@ main{
 }
 #outrop h1, #outro p{
     padding-top: 1em;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
+    margin-bottom: 3em;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 
@@ -353,18 +370,147 @@ main{
 
 
 /*----------------- FOOTER -------------------------------*/
+#end{
+    background-color:rgb(59, 58, 58);
+    color: rgb(241, 241, 241);
+}
+
 footer section{
     flex: 1;
-    padding-top: 2em;
+    padding-top: 4em;
+    padding-bottom: 2em;
 }
-footer section:not(:first-child,:last-child){
+footer section:not(:first-child, :last-child){
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
+footer section:first-child{
+    margin-right: 0.5em;
+}
+footer section:last-child{
+    margin-left: 0.5em;
+}
+footer hr{
+    border: none;
+    background-color: #71dfad;
+    margin: 0.5em 0;
+}
+
 /*--------------------------------------------------------*/
 
 
 
 /*----------------- RESPONSIVE ---------------------------*/
+@media screen and (max-width: 880px){
+    /* A partir d'ici, les paddings de côté merdent */
+    #about{
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+    }
+}
 
+@media screen and (max-width: 790px){
+    /* A partir de là, la nav s'emballe */
+    header #main-nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 760px){
+    #testimonials{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    #end{
+        display: block;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    #end section{
+        padding-top: 0.5em;
+        padding-bottom: 2em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #end p{
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    #about{
+        display: block;
+    }
+    #complement div{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #contacts{
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+    #end{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #testimonials .profile-pic{
+        min-width: 70px;
+        max-width: 70px;
+        min-height: 70px;
+        max-height: 70px;
+    }
+    #wrapper #testimonials section div.commentary{
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    #portfolio .padding.disp-flex nav{
+        padding-bottom: 1.5em;
+    }
+    #portfolio .padding.disp-flex nav li{
+        
+    }
+
+    #portfolio footer{
+        padding-right: 2em;
+        padding-left: 2em;
+        display: block;
+    }
+    #portfolio footer span{
+        margin-left: 70%;
+        margin-right: 2em;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    #about section:first-child{
+        display: block;
+    }
+    #what{
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #what section{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 460px){
+    #contacts form{
+        display: block;
+    }
+
+    #contacts form .inForm{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 /*--------------------------------------------------------*/
